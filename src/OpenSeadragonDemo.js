@@ -7,7 +7,7 @@ import {
 } from '@annotorious/react';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import flapImage from '../public/front_flapper.jpg';
+import flapImage from './front_flapper.jpg';
 
 function OpenSeadragonDemo() {
   // Flip animation state

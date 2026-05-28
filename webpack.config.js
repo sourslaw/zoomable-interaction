@@ -34,7 +34,8 @@ module.exports = (env, argv) => {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: '[name][ext]'
+          filename: '[name][ext]',
+          publicPath: publicPath
         }
       }
     ]
