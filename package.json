@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "A basic React website",
   "main": "index.js",
+  "homepage": "https://sourslaw.github.io/zoomable-interaction",
   "scripts": {
     "start": "webpack serve --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "react"
@@ -26,6 +29,7 @@
     "@babel/preset-react": "^7.22.0",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.5.3",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.0",
