@@ -1,13 +1,18 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
-module.exports = {
+module.exports = (env, argv) => {
+  const isProduction = argv.mode === 'production';
+  const publicPath = isProduction ? '/zoomable-interaction/' : '/';
+  
+  return {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/zoomable-interaction/',
+    publicPath: publicPath,
     clean: true,
   },
   module: {
@@ -42,6 +47,9 @@ module.exports = {
           }
         }
       ]
+    }),
+    new webpack.DefinePlugin({
+      'process.env.PUBLIC_URL': JSON.stringify(publicPath.replace(/\/$/, ''))
     })
   ],
   devServer: {
@@ -68,4 +76,5 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   }
+  };
 };
