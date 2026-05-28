@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = (env, argv) => {
@@ -30,23 +29,19 @@ module.exports = (env, argv) => {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]'
+        }
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html'
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'public',
-          to: '',
-          globOptions: {
-            ignore: ['**/index.html']
-          }
-        }
-      ]
     }),
     new webpack.DefinePlugin({
       'process.env.PUBLIC_URL': JSON.stringify(publicPath.replace(/\/$/, ''))
