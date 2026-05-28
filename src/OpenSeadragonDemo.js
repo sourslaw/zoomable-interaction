@@ -64,7 +64,7 @@ function OpenSeadragonDemo() {
 
   // IIIF Image URLs
   const backgroundImageUrl = 'https://collections.library.yale.edu/iiif/2/16595951/2031,1490,1722,1722/full/0/default.jpg'; // Revealed when flap opens
-  const flapImageUrl = 'public/zoomable-interaction/front_flapper.jpg'; // The flap itself
+  const flapImageUrl = '/zoomable-interaction/front_flapper.jpg'; // The flap itself
   const fadeInImageUrl = 'https://collections.library.yale.edu/iiif/2/16595951/642,1551,1722,1722/full/0/default.jpg'; // Fades in after 90 degrees
 
   // Calculate opacity for fade-in image (0 at 90°, 1 at 180°)
