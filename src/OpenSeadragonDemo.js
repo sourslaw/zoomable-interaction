@@ -239,7 +239,7 @@ function OpenSeadragonDemo() {
         clickToZoom: false
       },
       // Viewport settings for proper initial display
-      defaultZoomLevel: 1,
+      defaultZoomLevel: 0,
       minZoomLevel: 0.5,
       maxZoomLevel: 10,
       visibilityRatio: 0.8,
