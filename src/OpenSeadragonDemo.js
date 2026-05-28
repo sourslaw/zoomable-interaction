@@ -241,6 +241,13 @@ function OpenSeadragonDemo() {
       gestureSettingsMouse: {
         clickToZoom: false
       },
+      // Viewport settings for proper initial display
+      defaultZoomLevel: 1,
+      minZoomLevel: 0.5,
+      maxZoomLevel: 10,
+      visibilityRatio: 0.8,
+      constrainDuringPan: false,
+      homeFillsViewer: false,
       // Use CDN for control images to avoid 404 errors
       prefixUrl: 'https://cdn.jsdelivr.net/npm/openseadragon@4.1/build/openseadragon/images/',
       // Add overlays: background first (below), then fade-in, then flap (on top)
