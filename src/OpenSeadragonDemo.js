@@ -230,11 +230,8 @@ function OpenSeadragonDemo() {
     const fadeInY = (initialRegion.y + initialRegion.height * FADE_IN_OFFSET_Y) / CANVAS_H;
 
     return {
-      // Using a IIIF image from Yale Library
-      tileSources: {
-        type: 'image',
-        url: 'https://collections.library.yale.edu/iiif/2/16595950/full/full/0/default.jpg'
-      },
+      // Using a IIIF image from Yale Library with tiled pyramid for better performance
+      tileSources: 'https://collections.library.yale.edu/iiif/2/16595950/info.json',
       // Optional: configure viewer settings
       showNavigator: true,
       showRotationControl: true,
