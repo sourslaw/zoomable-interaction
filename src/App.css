@@ -124,7 +124,8 @@ body {
   position: relative;
   width: 100%;
   max-width: 1024px;
-  aspect-ratio: 4696 / 5752;
+  /* aspect-ratio: 4696 / 4314; */
+  aspect-ratio: auto;
   background: #f5f5f5;
   border: 2px solid #ddd;
   overflow: hidden;
@@ -364,7 +365,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: #000;
-  margin-bottom: 30px;
 }
 
 .info-note {
