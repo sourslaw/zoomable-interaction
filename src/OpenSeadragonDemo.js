@@ -472,24 +472,6 @@ function OpenSeadragonDemo() {
   
           </div>
         </div>
-
-        <div className="instructions">
-          <h3>How to use:</h3>
-          <ul>
-            <li><strong>Zoom & Pan:</strong> Use mouse wheel or controls to zoom; click and drag to pan</li>
-            <li><strong>Flip Animation:</strong> Use the slider to rotate the circular flap from closed (0°) to open (180°)</li>
-            <li><strong>Fade-in Effect:</strong> As the angle increases beyond 90°, a new image fades in gradually until fully visible at 180°</li>
-            <li><strong>Nudge Flap Position:</strong> Use arrow buttons in the "Nudge Position" panel, or focus the viewer and use keyboard arrow keys (hold Shift for ×10)</li>
-            <li><strong>Revealing Effect:</strong> As the flap rotates away, it reveals a background image underneath</li>
-            <li><strong>Annotations:</strong> Click and drag on the image to create rectangular annotations</li>
-            <li><strong>Flap Overlay:</strong> Both the flap and background automatically zoom and pan with the image</li>
-            <li>Hover over annotations to see them highlighted in green</li>
-            <li>Selected annotations appear with a red border</li>
-          </ul>
-          <p className="info-note">
-            <strong>IIIF Images:</strong> This demo uses high-resolution images from Yale University Library. The flap rotates to reveal a background image underneath, with both overlays automatically zooming and panning with the main image.
-          </p>
-        </div>
       </div>
     </div>
   );
