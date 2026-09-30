@@ -233,7 +233,7 @@ function OpenSeadragonDemo() {
       // Using a IIIF image from Yale Library with tiled pyramid for better performance
       tileSources: 'https://collections.library.yale.edu/iiif/2/16595950/info.json',
       // Optional: configure viewer settings
-      showNavigator: true,
+      showNavigator: false,
       showRotationControl: true,
       gestureSettingsMouse: {
         clickToZoom: false
@@ -428,27 +428,25 @@ function OpenSeadragonDemo() {
             tabIndex={0}
             aria-label="OpenSeadragon viewer - focus to enable keyboard nudging"
           >
-            <Annotorious>
-              <OpenSeadragonAnnotator
-                annotations={initialAnnotations}
-                style={customStyle}
-                drawingEnabled={true}
-                onCreateAnnotation={handleCreateAnnotation}
-                onUpdateAnnotation={handleUpdateAnnotation}
-                onDeleteAnnotation={handleDeleteAnnotation}
-              >
-                <OpenSeadragonViewer 
-                  className="openseadragon-viewer"
-                  options={options}
-                  ref={(el) => {
-                    if (el && el.viewer) {
-                      console.log('Viewer ref callback fired');
-                      handleViewerReady(el.viewer);
-                    }
-                  }}
-                />
-              </OpenSeadragonAnnotator>
-            </Annotorious>
+            <OpenSeadragonAnnotator
+              annotations={initialAnnotations}
+              style={customStyle}
+              drawingEnabled={false}
+              onCreateAnnotation={handleCreateAnnotation}
+              onUpdateAnnotation={handleUpdateAnnotation}
+              onDeleteAnnotation={handleDeleteAnnotation}
+            >
+              <OpenSeadragonViewer 
+                className="openseadragon-viewer"
+                options={options}
+                ref={(el) => {
+                  if (el && el.viewer) {
+                    console.log('Viewer ref callback fired');
+                    handleViewerReady(el.viewer);
+                  }
+                }}
+              />
+            </OpenSeadragonAnnotator>
           </div>
 
           <div className="flip-controls">
